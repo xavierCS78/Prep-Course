@@ -60,18 +60,14 @@ function colors(color) {
   switch(color) {
    case "blue":
      return "This is Blue";
-    break
    case "red":
      return "This is Red";
-    break
    case "green":
      return "This is Green";
-    break
    case "orange":
-     return "This is Orange";
-    break
+         return "This is Orange";
    default:
-     return "color not fount";        
+     return "color not found";        
   }
 }
 
@@ -168,27 +164,43 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+ if (valor === true) {
+  return "soy verdadero";
+ }return "soy falso";
 }
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  var arraytabla6 = [];
+  for (var t = 0; t <= 10; t ++){
+    arraytabla6.push (6 * t);
+  } return arraytabla6;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  if (numero < 1000 && numero > 99){
+    return true;
+  } return false;
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-}
+  var n = numero;
+  var cont = 1;
+  do {
+    n = n + 5;
+    cont = cont + 1;
+  }
+  while (cont < 9);
+  return n;
+  }
+
 
 
 // No modificar nada debajo de esta línea
